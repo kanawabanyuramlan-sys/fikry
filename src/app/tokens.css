@@ -1,0 +1,49 @@
+/* Hallmark · genre: editorial · theme: custom "Linen & Moss" · design-system: design.md · designed-as-app
+ * vibe: calm linen, warm charcoal, muted moss, eye-comfortable
+ * paper oklch(97.2% 0.008 85) · accent oklch(47% 0.045 145) moss · display Instrument Serif (roman) + body Plus Jakarta Sans
+ * axes: light / classical-serif / chromatic-other (muted green)
+ *
+ * Colours are stored as OKLCH channels so Tailwind opacity modifiers keep working:
+ *   colors.ink → oklch(var(--ink) / <alpha-value>)
+ */
+:root {
+  /* surfaces */
+  --paper: 97.2% 0.008 85;      /* linen page */
+  --card: 99.2% 0.004 85;       /* raised card */
+  --surface: 94.2% 0.012 85;    /* sand panel / image well */
+  --surface-2: 90.6% 0.015 80;  /* deeper sand */
+  --rule: 88.6% 0.012 80;       /* hairlines, borders */
+
+  /* text */
+  --ink: 25.5% 0.008 70;        /* warm charcoal */
+  --ink-soft: 49.5% 0.012 70;   /* secondary text — ≥ 4.5:1 on paper and surface */
+
+  /* accent — muted moss, used for < 5 % of any viewport */
+  --accent: 47% 0.045 145;
+  --accent-deep: 37% 0.038 145;
+  --accent-soft: 93.6% 0.018 135;
+  --sage: 85.5% 0.03 140;
+
+  /* status */
+  --sale: 52% 0.095 40;         /* clay — discounts, errors */
+  --warn: 52% 0.08 75;
+  --warn-soft: 95.5% 0.03 85;
+
+  --focus: var(--accent);
+
+  /* type */
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-short: 180ms;
+  --dur-med: 320ms;
+
+  /* shape */
+  --radius-card: 1.25rem;
+  --radius-input: 0.75rem;
+  --radius-pill: 999px;
+}
