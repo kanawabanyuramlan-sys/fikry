@@ -1,0 +1,9 @@
+# Netlify deploy config. Next.js is detected automatically (OpenNext-based Netlify runtime).
+[build]
+  # Creates/updates tables, runs the idempotent seed, then builds Next.js.
+  command = "npm run build:deploy"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"
